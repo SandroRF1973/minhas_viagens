@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minhas_viagens/mapa.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -18,7 +19,10 @@ class _HomeState extends State<Home> {
 
   _abrirMapa() {}
   _excluirViagem() {}
-  _adicionarLocal() {}
+
+  _adicionarLocal() {
+    Navigator.push(context, MaterialPageRoute(builder: (_) => const Mapa()));
+  }
 
   @override
   Widget build(BuildContext context) {
